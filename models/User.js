@@ -12,7 +12,8 @@ const userSchema = new Schema({
   role: {type: String, enum: ['SOY ALUMNO', 'SOY PROFE', 'ADMON']},
   subjects: {type: String, default: 'Subject + nivel'},
   events: Array, //Array de Objetoeventos que aun no hay creados
-  school: String, //CON EL JSON 
+  school: String, //CON EL JSON
+  //falta el buddy  
 }, {
   timestamps: {
     createdAt: 'created_at',

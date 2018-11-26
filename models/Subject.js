@@ -4,8 +4,8 @@ const { Schema }   = mongoose;
 const subjectSchema = new Schema({
   title: String,
   description: String,
-  pupils: [{type: new Schema.type.ObjectId, ref: 'User'}],
-  theachers: [{type: new Schema.type.ObjectId, ref: 'User'}],
+  // pupils: [{type: new Schema.type.ObjectId, ref: 'User'}],
+  // theachers: [{type: new Schema.type.ObjectId, ref: 'User'}],
   icon: String
 
 });
