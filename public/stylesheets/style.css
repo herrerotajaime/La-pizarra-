@@ -1,41 +1,8 @@
-/* blackboard #2B3A42
-#3F5866
-#BDD3DE
-tiza: #F0F0DF
-orange: #FF8F00 */
-
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; }
 
 a {
-  color: #00B7FF; 
-}
-#map {
-  height: 300px; 
-}
-
-.button {
-    background-color:#F0F0DF; /* Green */
-    /* border: 5px; */
-    border-radius: 3px;
-    color: #2B3A42;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    width: 90%;
-}
-.button:hover {
-  background-color: #FF8F00; /* Green */
-  color: white;
-}
-/* #first {
-  display: none;
-} */
-.off {
-  display: none;
-}
+  color: #00B7FF; }
 
 /*# sourceMappingURL=style.css.map */

@@ -42,10 +42,14 @@
   </div>
 
   <div id="second" class="off">
-    {{!-- Recibir en el render de signup (junto con message), una lista 
+    {{#each subjects}}
+    <label for="checkbox">{{this.title}}</label>
+    <input type="checkbox" name=subjects value={{this.title}}>
+    {{/each}}
+    {{!-- Recibir en el render de signup (junto con message), una lista
     con Subject.find para guardar su id con los cheket con su nombre --}}
 
-    <input type="submit" name="role" value="SOY PROFE" class="button">
+    <input type="submit" value="submit">
     {{!-- <input type="button" name="next" class="next action-button" value="Next" /> --}}
   </div>
 
