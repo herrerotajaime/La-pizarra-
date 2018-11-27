@@ -1,30 +1,74 @@
-<h1>Página principal privada</h1>
-{{!-- {{#if eventos}} --}}
-<h2>Próximas citas</h2>
-{{!-- meter un partial de event, de un array de User Event --}}
+<nav>
+  <ul>
+    <li><a href="/">Home</a></li>
+    <li><a href="/profile">Perfil</a></li>
+  </ul>
+</nav>
 
-{{!-- {{#if profe}} --}}
-<h2>Mapa de niños frustrados</h2>
-<ul>
-  {{#each events}}
-  <li>
-    <p>Meter partial del event</p>
-  </li>
-  {{/each}}
-</ul>
+<h1>Lista de citas</h1>
+<p>gris-pendiente</p>
+<p>verde-confirmada</p>
+<p>rojo-pasada</p>
 
-<div id="map"></div>
-<script src="/javascripts/listEvent.js"></script>
+{{!-- AMBOS: ID --}}
+
+{{!-- {{#if eventos}}
+PROBAR CUANDO HAYA EVENTOS meter un partial de event, de un array de User Event
+{{#if profe}} --}}
+
+
+{{!-- SOLO PARA PUPILS --}}
+
+<div id="mapTeachers"></div>
+
+
+
+<script> window.info = {{{teacherList}}}</script>
+<script src="/javascripts/listTeacherMap.js"></script>
+
+
+
+
+PARA LOS ALUMNOS CREA UN MAPA DE USERS PROFES
+
+<form action="/meeting" method="POST" id="form-meeting">
+  <label for="username">Username</label>
+  <input id="username" type="text" name="username" placeholder="JonSnow">
+
+  <br><br>
+
+  <label for="password">Password</label>
+  <input id="password" type="password" name="password" placeholder="Your password">
+  <br>
+  {{#if message }}
+    <div class="error-message">{{ message }}</div>
+  {{/if}}
+
+  <br><br>
+
+  <button>Login</button>
+
+  <p class="account-message">
+    Don't have an account yet?
+    <a href="/signup">Signup</a>
+  </p>
+</form> --}}
+
+{{!-- <h2>Mapa de niños frustrados</h2>
+
+
+{{!-- <div id="map"></div>
+<script src="/javascripts/listEvent.js"></script> --}}
 
 {{!-- <script>
   window.restaurants = {{{ restStr }}}
 </script> --}}
 
 {{!-- {{#if alumno}} --}}
-<h2>Crear evento</h2>
+{{!-- <h2>Crear evento</h2>
 <div class="pendiente" class="confirmado">
 
-</div>
+
 
 
 <!-- <script type="text/javascript" src="main.js"></script> -->

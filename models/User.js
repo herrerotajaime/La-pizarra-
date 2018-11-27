@@ -6,7 +6,10 @@ const userSchema = new Schema({
   password: String,
   name: String,
   surname: String,
-  zip: Number,
+  latitude: Number,
+  longitude: Number,
+  //zip: Number
+  location: { type: { type: String }, coordinates: [Number] },
   description: String,
   genre: {type: Number, enum: [0, 1, 2]},
   role: {type: String, enum: ['SOY ALUMNO', 'SOY PROFE', 'ADMON']},

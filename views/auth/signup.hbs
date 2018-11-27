@@ -49,9 +49,17 @@
     {{!-- Recibir en el render de signup (junto con message), una lista
     con Subject.find para guardar su id con los cheket con su nombre --}}
 
-    <input type="submit" value="submit">
+
     {{!-- <input type="button" name="next" class="next action-button" value="Next" /> --}}
-  </div>
+    <label>Indica tu posición aproximada</label>
+    <input id="lat-pos" type="hidden" name="latitude" placeholder="Latitude">
+    <input id="lng-pos" type="hidden" name="longitude" placeholder="Longitude">
+
+    <input type="submit" value="submit">
+    <div id="map"></div>
+</form>
+<script src="/javascripts/addLocation.js"></script>
+</div>
 
 
 
