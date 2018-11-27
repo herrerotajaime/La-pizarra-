@@ -81,10 +81,11 @@ router.post("/signup", (req, res, next) => {
       return;
     }
 
-    //console.log(req.body)
+    req.body.latitude = parseFloat(req.body.latitude);
+    req.body.longitude = parseFloat(req.body.longitude);
+    
     const salt = bcrypt.genSaltSync(bcryptSalt);
     req.body.password = bcrypt.hashSync(req.body.password, salt);
-    //hassPass(req.body.password);
 
     const newUser = new User(req.body);
 

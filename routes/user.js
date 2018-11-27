@@ -5,14 +5,22 @@ const User = require("../models/User");
 const { ensureLoggedIn, ensureLoggedOut } = require('connect-ensure-login');
 
 router.get('/user/main', ensureLoggedIn(), (req, res) => {
-  res.render('user/main'
+  User.find({role: 'SOY PROFE'})
+  .then(teacherList => {
+    console.log(teacherList);
+    res.render('user/main', {teacherList});
+  })
+  .catch(err => {
+    res.render("user/main", { message: "Something went wrong" });
+  })
+
+  
   // {
   //   restaurants,
   //   restStr: JSON.stringify(restaurants),
   //   message: req.flash('error')
   // }
   
-  );
 });
 
 
