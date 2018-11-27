@@ -5,70 +5,29 @@
   </ul>
 </nav>
 
+{{!-- AMBOS: ID --}}
+
 <h1>Lista de citas</h1>
 <p>gris-pendiente</p>
 <p>verde-confirmada</p>
 <p>rojo-pasada</p>
 
-{{!-- AMBOS: ID --}}
-
 {{!-- {{#if eventos}}
-PROBAR CUANDO HAYA EVENTOS meter un partial de event, de un array de User Event
-{{#if profe}} --}}
+PROBAR CUANDO HAYA EVENTOS meter un partial de event, de un array de User Event--}}
 
 
 {{!-- SOLO PARA PUPILS --}}
+<h1>Encuentra a tu profe</h1>
+<div id="pupil">
+  <div id="teachersMap"></div>
+  <div id="form-meeting">
 
-<div id="mapTeachers"></div>
+  </div>
+</div>
 
 
+<script>
+  window.teacherList = {{{teacherStr}}}
+</script>
 
-<script> window.info = {{{teacherList}}}</script>
 <script src="/javascripts/listTeacherMap.js"></script>
-
-
-
-
-PARA LOS ALUMNOS CREA UN MAPA DE USERS PROFES
-
-<form action="/meeting" method="POST" id="form-meeting">
-  <label for="username">Username</label>
-  <input id="username" type="text" name="username" placeholder="JonSnow">
-
-  <br><br>
-
-  <label for="password">Password</label>
-  <input id="password" type="password" name="password" placeholder="Your password">
-  <br>
-  {{#if message }}
-    <div class="error-message">{{ message }}</div>
-  {{/if}}
-
-  <br><br>
-
-  <button>Login</button>
-
-  <p class="account-message">
-    Don't have an account yet?
-    <a href="/signup">Signup</a>
-  </p>
-</form> --}}
-
-{{!-- <h2>Mapa de niños frustrados</h2>
-
-
-{{!-- <div id="map"></div>
-<script src="/javascripts/listEvent.js"></script> --}}
-
-{{!-- <script>
-  window.restaurants = {{{ restStr }}}
-</script> --}}
-
-{{!-- {{#if alumno}} --}}
-{{!-- <h2>Crear evento</h2>
-<div class="pendiente" class="confirmado">
-
-
-
-
-<!-- <script type="text/javascript" src="main.js"></script> -->

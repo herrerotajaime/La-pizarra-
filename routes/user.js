@@ -7,8 +7,12 @@ const { ensureLoggedIn, ensureLoggedOut } = require('connect-ensure-login');
 router.get('/user/main', ensureLoggedIn(), (req, res) => {
   User.find({role: 'SOY PROFE'})
   .then(teacherList => {
-    console.log(teacherList);
-    res.render('user/main', {teacherList});
+    //console.log(teacherList, 'Lista de teachhhheeeerssss ');
+    //console.log(JSON.stringify(teacherList),'lo mismo pero JSOneado')
+    res.render('user/main', {
+     // teacherList,
+      teacherStr: JSON.stringify(teacherList)
+    });
   })
   .catch(err => {
     res.render("user/main", { message: "Something went wrong" });
