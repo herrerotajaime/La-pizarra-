@@ -81,27 +81,19 @@ router.post("/signup", (req, res, next) => {
       return;
     }
 
-    console.log(req.body)
+    //console.log(req.body)
     const salt = bcrypt.genSaltSync(bcryptSalt);
     req.body.password = bcrypt.hashSync(req.body.password, salt);
     //hassPass(req.body.password);
 
     const newUser = new User(req.body);
 
-
-
-    ////?????????????????????'
-    //Intentando instanciarlo fuera
-    //newUser(req.body); //assign
-  
-
-
 console.log(newUser)
-
 
     newUser.save()
       .then(() => {
-        res.redirect("/signup/");
+        console.log('Ha GUARDADO CORRECTAMENTE el nuevo usuario')
+        res.redirect("/login");
       })
       .catch(err => {
         res.render("auth/signup", { message: "Something went wrong" });
