@@ -139,3 +139,13 @@ Subject.create(subjects, (err) => {
   console.log(`Created ${subjects.length} subjects`)
   mongoose.connection.close()
 });
+
+
+// .then(usercreated => {
+//   console.log(usercreated[1])
+//   meeting[0].pupil = usercreated[1]._id;
+//   meeting[0].teacher = usercreated[0]._id;
+  
+
+//   return Meeting.create(meeting)
+// })

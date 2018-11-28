@@ -12,7 +12,7 @@ const userSchema = new Schema({
   description: String,
   genre: {type: Number, enum: [0, 1, 2]},
   role: {type: String, enum: ['SOY ALUMNO', 'SOY PROFE', 'ADMON']},
-  subjects: Array,
+  // subjects: [{type:Schema.Types.ObjectId, ref:'Subject'}],
   meetings: Array, //Array de Objetoeventos que aun no hay creados
   school: String, //CON EL JSON
 }, {
