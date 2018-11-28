@@ -5,7 +5,7 @@ const meetingSchema = new Schema({
   pupil: {type: new Schema.type.ObjectId, ref: 'User'},
   teacher: {type: new Schema.type.ObjectId, ref: 'User'},
   title: String,
-  date: Date, //Repo Sergio 
+  date: Date, 
   hour: TimeRanges,
   contact: {
     email: String,
@@ -14,7 +14,7 @@ const meetingSchema = new Schema({
   school: String,
   genre: {type: Number, enum: [0, 1, 2]},
   subject: {type: new Schema.type.ObjectId, ref: 'Subject'},
-  //Puede qu evaya mejor con un enum, pero....ya veremos
+
   status: {
     pending: {type: boolean, default: true},
     confirmed: {type: boolean, default: false},
