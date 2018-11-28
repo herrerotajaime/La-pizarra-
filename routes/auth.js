@@ -81,6 +81,8 @@ router.post("/signup", (req, res, next) => {
       return;
     }
 
+    console.log(req.body)
+
     req.body.latitude = parseFloat(req.body.latitude);
     req.body.longitude = parseFloat(req.body.longitude);
     
@@ -89,7 +91,7 @@ router.post("/signup", (req, res, next) => {
 
     const newUser = new User(req.body);
 
-console.log(newUser)
+    
 
     newUser.save()
       .then(() => {

@@ -36,15 +36,19 @@
       <option value="3">Chique</option>
     </select>
     <br><br>
-    <input type="button" name="role" value="SOY ALUMNO" class="button">
-    <input type="button" name="role" value="SOY PROFE" class="button">
-    {{!-- <input type="button" name="next" class="next action-button" value="Next" /> --}}
+    <input type="radio" name="role" value="SOY ALUMNO">
+    <label for="radio">SOY ALUMNO</label>
+    <input type="radio" name="role" value="SOY PROFE">
+    <label for="radio">SOY PROFE</label>
+
+    <input type="button" name="next" class="next action-button" value="Siguiente" />
+    
   </div>
 
   <div id="second" class="off">
     {{#each subjects}}
+    <input type="checkbox" name="subjects" value={{this.title}}>
     <label for="checkbox">{{this.title}}</label>
-    <input type="checkbox" name=subjects value={{this.title}}>
     {{/each}}
     {{!-- Recibir en el render de signup (junto con message), una lista
     con Subject.find para guardar su id con los cheket con su nombre --}}

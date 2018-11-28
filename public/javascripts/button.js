@@ -1,7 +1,7 @@
 $(document).ready(() => {
 
 
-  document.querySelector('.button').onclick = function () {
+  document.querySelector('.next').onclick = function () {
     // let container = document.getElementById('first');
     // //container.classList.remove("on");
     // container.classList.add("off");
